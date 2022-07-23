@@ -1,4 +1,4 @@
-package com.example.heartify;
+package com.example.heartify.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.heartify.R;
 
 import java.util.Objects;
 
