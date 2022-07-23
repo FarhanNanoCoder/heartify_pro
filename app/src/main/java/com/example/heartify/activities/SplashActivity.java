@@ -19,9 +19,6 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         Objects.requireNonNull(getSupportActionBar()).hide();
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
