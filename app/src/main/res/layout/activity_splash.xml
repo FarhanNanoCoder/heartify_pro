@@ -11,14 +11,14 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="224dp"
+        android:layout_marginBottom="248dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="@string/heartify"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="44sp"
-        android:fontFamily="@font/poppins_regular"
-
         android:textColor="@color/white"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

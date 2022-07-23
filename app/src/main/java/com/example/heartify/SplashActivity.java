@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import java.util.Objects;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -14,12 +16,15 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, IntroActivity.class);
                 startActivity(intent);
                 finish();
             }
