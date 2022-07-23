@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity implements RecordListListene
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this,COERecordActivity.class);
+                startActivity(intent);
             }
         });
 
