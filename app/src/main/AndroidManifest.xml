@@ -15,6 +15,16 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".activities.RecordDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Heartify.NoActionBar"/>
+
+        <activity
+            android:name=".activities.COERecordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Heartify.NoActionBar" />
+
+        <activity
             android:name=".activities.IntroActivity"
             android:exported="false" />
         <activity
