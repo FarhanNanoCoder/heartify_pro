@@ -47,12 +47,6 @@ public class MainActivity extends AppCompatActivity implements RecordListListene
         imageView = findViewById(R.id.activity_main_empty_image);
         context = this;
 
-//        records.add(new Record(120,80,60,"0:05","15-7-2022",""));
-//        records.add(new Record(125,78,60,"0:05","15-7-2022",""));
-//        records.add(new Record(135,85,60,"0:05","15-7-2022",""));
-//        records.add(new Record(140,90,60,"0:05","15-7-2022",""));
-//        records.add(new Record(130,75,60,"0:05","15-7-2022",""));
-
         recordList.setRecords(Helpers.getRecordsFromDB(MainActivity.this));
 
         recordListAdaptor = new RecordListAdaptor(this,recordList.getRecords(),this);
@@ -81,9 +75,6 @@ public class MainActivity extends AppCompatActivity implements RecordListListene
         totalText.setText("Total results found: "+String.valueOf(RecordList.getInstance().getCount()));
     }
 
-//    public static void deleteAllRecordsFromDb(){
-//        Helpers.setRecordsToDB(c,new ArrayList<Record>());
-//    }
 
     @Override
     public void onRecordDeleteListener(int position) {

@@ -30,12 +30,21 @@ public class RecordListAdaptor extends RecyclerView.Adapter<RecordListAdaptor.Re
     Context context;
     private RecordListListeners recordListListeners;
 
+    /**
+     * This is a constructor to for the adaptor
+     * @param context, records, recordListListener
+     */
     public RecordListAdaptor(Context context, List<Record> records, RecordListListeners recordListListeners) {
         this.records = records;
         this.context = context;
         this.recordListListeners = recordListListeners;
     }
 
+    /**
+     * This is a method to for the adaptor
+     * @param parent, viewType
+     *                This binds the layout to the recycler view
+     */
     @NonNull
     @Override
     public RecordListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,6 +53,11 @@ public class RecordListAdaptor extends RecyclerView.Adapter<RecordListAdaptor.Re
         return new RecordListViewHolder(view);
     }
 
+    /**
+     * This is a method to for the adaptor
+     * @param holder, position
+     *                This allows to access the views and do certain operations
+     */
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull RecordListViewHolder holder, @SuppressLint("RecyclerView") int position) {
@@ -91,11 +105,19 @@ public class RecordListAdaptor extends RecyclerView.Adapter<RecordListAdaptor.Re
         });
     }
 
+    /**
+     * This is a method to get the size of the list in the adaptor
+     *       This allows to access the views and do certain operations
+     */
+
     @Override
     public int getItemCount() {
         return records.size();
     }
 
+    /**
+     * This is a class to connect the views with the local variables
+     */
     public class RecordListViewHolder extends RecyclerView.ViewHolder{
         TextView sysPressure,diaPressure,heartRate,dateMeasured,status;
         Button editButton,deleteButton,viewButton;
@@ -103,6 +125,7 @@ public class RecordListAdaptor extends RecyclerView.Adapter<RecordListAdaptor.Re
         public RecordListViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            //connecting views by their ids
             sysPressure = itemView.findViewById(R.id.r_r_v_i_systolic_data);
             diaPressure = itemView.findViewById(R.id.r_r_v_i_diastolic_data);
             heartRate = itemView.findViewById(R.id.r_r_v_i_heart_rate_data);

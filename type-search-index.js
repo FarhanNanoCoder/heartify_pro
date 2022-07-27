@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.example.heartify.models","l":"RecordList"},{"p":"com.example.heartify.interfaces","l":"RecordListListeners"},{"p":"com.example.heartify","l":"RecordListTest"}]
