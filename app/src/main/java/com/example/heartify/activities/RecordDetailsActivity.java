@@ -29,6 +29,7 @@ public class RecordDetailsActivity extends AppCompatActivity {
         backButton = findViewById(R.id.activity_record_details_back_button);
 
         Intent intent = getIntent();
+        //getting the record details from recordList
         if(intent.hasExtra("index")){
             int index = intent.getIntExtra("index",-1);
             if(index>-1 && index< RecordList.getInstance().getCount()){

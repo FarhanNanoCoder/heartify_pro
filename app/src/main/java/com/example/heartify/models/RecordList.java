@@ -17,6 +17,7 @@ public class RecordList {
 
     /**
      * This is a method to ensure single instance of the class
+     * @return RecordList
      */
     public static RecordList getInstance(){
         if(recordList_instance==null){
@@ -27,11 +28,17 @@ public class RecordList {
 
     /**
      * This is a method to get the list of records
+     * @return recordList
      */
     public List<Record> getRecords() {
         return records;
     }
 
+    /**
+     * This is a method to get the list of records in sorted order based on systolic pressure
+     * @param sortBySystolicPressure
+     * @return recordList
+     */
     public List<Record> getRecords(boolean sortBySystolicPressure){
         if(sortBySystolicPressure){
             Collections.sort(records, new RecordComparatorOnSystolicPressure());
@@ -41,6 +48,7 @@ public class RecordList {
 
     /**
      * This is a method to get a particular record from the  list of records
+     * @return Record
      */
     public Record getRecord(int position) {
         if(position>=0 && position<records.size()){
@@ -51,7 +59,8 @@ public class RecordList {
     }
 
     /**
-     * This is a method to get the count of records
+     * This is a method to get a the size of the recordList
+     * @return size of th list
      */
     public int getCount() {
         return records.size();
@@ -67,6 +76,7 @@ public class RecordList {
 
     /**
      * This is a method to add a record to the list of records
+     * Throws exception on same entry
      * @param record
      */
     public void addRecord(Record record){
@@ -79,6 +89,7 @@ public class RecordList {
 
     /**
      * This is a method to update a particular record
+     * Throws exception on invalid position
      * @param record, position
      */
     public void updateRecord(int position,Record record){
@@ -91,6 +102,7 @@ public class RecordList {
 
     /**
      * This is a method to delete a particular record
+     *  Throws exception on invalid position
      * @param position
      */
     public void  deleteRecord(int position){
@@ -101,6 +113,9 @@ public class RecordList {
         }
     }
 
+    /**
+     * This is a method to delete all records
+     */
     public void deleteAllRecords(){
         records.clear();
     }

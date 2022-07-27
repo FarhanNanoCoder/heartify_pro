@@ -49,6 +49,7 @@ public class COERecordActivity extends AppCompatActivity {
         timeMeasuredLayout  = findViewById(R.id.coe_record_time_measured_edit_text_layout);
 
         Intent intent = getIntent();
+        //checking if the activity should in in update or create mode depending on t he availability of intent extra
         if(intent.hasExtra("index")){
             int index = intent.getIntExtra("index",-1);
 //            Toast.makeText(this, String.valueOf(index), Toast.LENGTH_SHORT).show();
@@ -141,20 +142,6 @@ public class COERecordActivity extends AppCompatActivity {
             }
         };
 
-        //firing date picker
-//        dateMeasured.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if(b){
-//                    new DatePickerDialog(COERecordActivity.this,
-//                            dateSetListener,
-//                            calendar.get(Calendar.YEAR),
-//                            calendar.get(Calendar.MONTH),
-//                            calendar.get(Calendar.DAY_OF_MONTH)
-//                    ).show();
-//                }
-//            }
-//        });
         dateMeasuredLayout.setEndIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,6 +163,7 @@ public class COERecordActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String str = charSequence.toString().trim();
+                //checking the format validity of the input
                 if(str.length()==10){
                     String[]temp = str.split("-",3);
                     if(temp.length==3){
@@ -203,15 +191,6 @@ public class COERecordActivity extends AppCompatActivity {
             }
         });
 
-        //firing time  picker
-//        timeMeasured.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if(b){
-//                    new TimePickerDialog(COERecordActivity.this,timeSetListener,hr,min,true).show();
-//                }
-//            }
-//        });
         timeMeasuredLayout.setEndIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -228,6 +207,7 @@ public class COERecordActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String str = charSequence.toString().trim();
+                //checking the format validity of the input
                 if(str.length()>=3 && str.length()<=5){
                     String[]temp = str.split(":");
                     if(temp.length==2){

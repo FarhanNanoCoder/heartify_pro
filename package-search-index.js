@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.example.heartify"},{"l":"com.example.heartify.interfaces"},{"l":"com.example.heartify.models"}]
